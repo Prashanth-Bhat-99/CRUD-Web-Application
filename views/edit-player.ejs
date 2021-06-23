@@ -1,0 +1,95 @@
+<%- include ('partials/header.ejs'); -%>
+<div class="container">
+    <% if (message) { %>
+        <p class="text-center text-danger"><%= message %></p>
+    <% } %>
+
+    <% if (player) { %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+            
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="username">Instrument Name</label>
+                    <input type="text" class="form-control" name="username" id="username" value="<%= player.user_name %>"  >
+                </div>
+        
+        
+                <div class="form-group col-md-6">
+                    <label for="position">Instrument Type</label>
+                    <select id="position" name="position" class="form-control" required>
+                        <option ><%= player.position %></option>
+                        <option>String Instrument</option>
+                        <option>Percussion Instrument</option>
+                        <option>Key Instrument</option>
+                        <option>Wind Instrument</option>
+                        
+                    </select>
+                </div>
+        
+
+
+        
+                <div class="form-group col-md-4">
+                    <label for="itype">Instrument Region</label>
+                    <select id="itype" name="itype" class="form-control" required>
+                    <option ><%= player.itype %></option>
+                        <option>Indian Instrument</option>
+                        <option>Western Instrument</option>
+                    </select>
+        
+                </div>
+        
+        
+                <div class="form-group col-md-6">
+                    <label for="number">Quantity</label>
+                    <input type="number" class="form-control" name="number" id="number" value="<%= player.number %>"  required>
+                </div>
+        
+            </div>
+        
+            <div class="form-row">
+                <label for="number">Price</label>
+                <div class="form-group col-md-6">
+                    <input type="number" class="form-control" name="price" id="price" value="<%= player.price %>" required>
+                </div>
+        
+            </div>
+
+            <button type="submit" class="btn btn-success float-right">Update Instrument</button>
+        </form>
+
+    <% } else { %>
+        <p class="text-center">Instrument Not Found. Go <a href="/add">here</a> to add Instruments</p>
+    <% } %>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

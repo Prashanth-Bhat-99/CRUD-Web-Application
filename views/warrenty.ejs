@@ -1,0 +1,71 @@
+<%- include ('partials/header.ejs'); -%>
+    <div class="table-wrapper">
+        <% if (players.length > 0) {%>
+            
+            <div class="warrenty">
+
+                <u>Warranty Details</u><br><br>
+      
+             </div>
+
+             <div class="warrenty1">
+      
+      
+          <b>The customer shall NOT have any claim under this warranty for repair or adjustment expenses if:</b><br><br><br>
+      
+      
+          (1) The problem is caused by improper, rough or careless treatment;<br><br>
+          (2) The problem is caused by a fire or other natural calamity;<br><br>
+          (3) The problem is caused by improper repair or adjustment made by anyone other than a Naadaswara service centre;<br><br>
+          (4) The problem is caused by battery leakage, bending of the unit, broken display or key;<br><br>
+          (5) The case or battery is damaged or worn;<br><br>
+          (6) Maintenance requested consists of repair or replacement of options, accessories, software, or consumables (AC adaptor, cable, battery, etc.);<br><br>
+          (7) The proof of purchase is not presented when requesting service;<br><br>
+          (8) The warranty period has expired.<br><br>
+          (9)The products have been subject to abuse, mishandling, used beyond the limits specified by the manufacturer and the customer has not complied with any 
+          technical instructions for use of the products including those relating to maintenance and care;<br><br>
+      
+          (10)The product has been altered by the customer and any fault in the product has been caused by use of accessories or replacement parts which 
+          were not original components of the product.<br><br><br>
+        </div>
+      
+          <div class="footer">
+      
+           <b> NOTE : All products have a FREE 2-Year Warranty period </b>
+          </div>
+      
+    </div>
+            
+        <% } else { %>
+            
+        <% } %>
+    </div>
+
+
+<style>
+ 
+
+ .warrenty{
+     text-align: center;
+     font-size: 50px;
+
+ }
+
+ .warrenty1{
+
+     font-size: 20px;
+     text-align: center;
+
+ }
+
+.footer{
+
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+</style>
+</body>
+</html>
